@@ -1,0 +1,366 @@
+
+.carousel{
+  overflow-x: hidden;
+}
+.hero {
+  background-size: cover;    
+  background-repeat: no-repeat;
+  background-image: ; 
+  background-position: center;
+  height: 1024px;;
+  padding-bottom: 70px;
+  overflow: hidden;
+}
+  
+  /* Navbar styling */
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.503);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: ;
+    backdrop-filter: blur(20px);
+    padding: 10px 20px;
+    border-radius: 30px; 
+    margin-top: 30px;
+  }
+  
+  .navbar-nav {
+    color: black;
+    font-weight: 600;
+  }
+
+  .nav-item{
+    border-radius: 32px;
+  }
+
+  .navbar-nav a:hover {
+    background-color: rgba(255,255,255,0.5);
+  }
+  
+  .navbar-nav a {
+    border-radius: 32px;
+    padding: 5px 15px;
+  }
+  
+  .btn-primary {
+    background-color: #FFC73C;
+    text-decoration: none;
+    color: #FFFF;
+    border-radius: 30px;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e6b800;
+  }
+
+.my-6{
+  margin-top: 20px;
+}
+
+img.white-filter {
+  filter: brightness(0) invert(1);
+}
+
+img.hero{
+  width: 94% !important;
+  padding-top: 100px
+}
+.hero-content{
+  
+}
+
+
+
+
+@media (min-width: 768px) { /* Breakpoint md di Bootstrap */
+  .hero {
+      background-position: top;
+  }
+  img.white-filter {
+    filter: none;
+  }
+}
+
+.carousel{
+  width: 100%;
+  margin-left: 80px;
+}
+
+.swiper-container {
+  width: 100%;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 228px !important;
+  transition: transform 0.6s ease-in-out;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  
+ 
+}
+.swiper-slide img {
+  border-radius: 32px;
+  width: 228px;
+  object-fit: cover;
+  height: 336px;
+  
+}
+
+.swiper-slide:hover {
+  transform: scale(1.05) !important;
+}
+
+.about{
+  background-image:linear-gradient(180deg, rgba(0,209,255,0.9977240896358543) 28%, rgba(0,209,255,0.14618347338935578) 69%, rgba(0,209,255,1) 100%), url('../images/about.png'); 
+  background-size: cover;    
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-y: hidden;
+  padding-top: 200px;
+}
+
+
+.timeline-with-icons {
+  border-left: 2px dashed hsl(0, 0%, 90%);
+  position: relative;
+  list-style: none;
+}
+
+
+li {
+  list-style: none;
+}
+
+.border-left-dashed{
+  border-left: 2px dashed hsl(0, 0%, 90%);
+  padding-left: 30px;
+  margin-left: 18px;
+}
+
+.timeline img{
+  width: 30px;
+}
+
+.aggregator{
+  background-image:  url('../images/Aggregator.png');
+  background-size: cover;    
+  background-repeat: no-repeat;
+  padding-top: 130px;
+  padding-bottom: 150px;
+}
+
+.berita__utama{
+  background-image:  url('../images/Aggregator.png');
+}
+
+@media (max-width: 768px) {
+  .logo {
+      width: 120px;
+      margin-top: 0px; /* Ukuran ketika di mobile */
+  }
+  a.navbar-brand{
+    padding: 0px 0px 5px;
+  }
+  .hero {
+    background-image: linear-gradient(180deg, rgba(0,209,255,0) 0%, rgba(0,209,255,0.16058123249299714) 37%, rgba(0,209,255,0.2498249299719888) 82%, rgba(0,209,255,1) 100%), url('../images/cover.png');
+  }
+  .carousel{
+    margin-left: 0px;
+  }
+  .swiper-slide {
+    width: 109px !important;
+    height: 161px;
+  }
+  .swiper-slide img {
+    width: 109px;
+    height: 161px;
+  }
+  .hero-content{
+    height: 120vh;
+    padding-top: 50px;
+  }
+  .img-container {  
+    height: 130px !important;
+  }
+  .img-container img {
+    width: 130px !important;  
+    height: 130px !important;
+  }
+  .gap-6{
+    gap: 24px;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.berita_utama {
+  position: relative; /* Agar overlay dan teks dapat diposisikan di atas gambar */
+  overflow: hidden; /* Menyembunyikan bagian gambar yang melewati batas elemen */
+  display: flex;
+  align-items: flex-end; /* Sesuaikan dengan kebutuhan */
+  height: 300px; /* Atur tinggi elemen sesuai kebutuhan */
+  /* Atur lebar elemen sesuai kebutuhan */
+}
+
+.berita_utama img {
+  width: 100%; /* Membuat gambar menutupi elemen */
+/* Memastikan gambar menutupi elemen */
+  object-fit: cover; /* Menjaga proporsi gambar */
+  transition: transform 0.5s ease;
+  object-position: center; /* Efek transisi transformasi */
+}
+
+.berita_utama:hover img {
+  transform: scale(1.1); /* Zoom out gambar saat hover */
+}
+
+.berita_utama .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0,209,255,0) 10%, rgba(0,209,255,1) 50%); /* Latar belakang semi-transparan */
+  display: flex;
+  align-items: flex-end; /* Sesuaikan dengan kebutuhan */
+  justify-content: center; /* Pusatkan teks secara horizontal */
+  color: white; /* Warna teks */
+  padding: 1rem; /* Padding di sekitar teks */
+  z-index: 1; /* Menempatkan overlay di atas gambar */
+}
+
+.berita_utama{
+  height: 626px;
+  border-radius: 16px;
+}
+
+.article_title {
+  font-size: 1.5rem; /* Ukuran teks jika diperlukan */
+}
+
+.img-container {  
+  width: 195px;
+  height: 153px;
+  overflow: hidden; /* Prevents the image from exceeding its container */
+  border-radius: 16px; /* Ensures the rounded corners apply to the container */
+}
+
+.img-container img {
+  width: 100%;
+  border-radius: 16px;
+  transition: transform 0.3s ease-in-out; /* Smooth zoom in transition */
+  transform-origin: center center; /* Keeps the image centered when scaling */
+}
+
+.img-container:hover img {
+  transform: scale(1.1); /* Zoom in the image on hover */
+}
+
+
+
+.gap-6{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.btn-secondary{
+  color: white;
+  background-color: #00D1FF;
+  border-radius: 16px;
+  padding: 24px 24px;
+  text-align: center;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #00cfff; /* Warna latar belakang yang sesuai */
+  color: white;
+}
+
+footer img {
+  max-width: 180px; /* Ukuran logo di footer */
+}
+
+footer p {
+  font-size: 1rem; /* Ukuran teks deskripsi */
+  line-height: 1.6;
+}
+
+footer hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-color: white;
+}
+
+footer .text-md-end {
+  text-align: right;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ddd; /* Warna ikon ketika di-hover */
+}
+
+
+
+
+
+
+.register{
+  background-image:  url('../images/form-bg.png');
+  background-size: cover;    
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 185vh;
+}
+
+.upload-box {
+  width: 200px;
+  height: 200px;
+  background-color: #F8F8F8;
+  border-radius: 8px;
+  position: relative;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #00c0ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus-icon {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.upload-box:hover {
+  cursor: pointer;
+  background-color: #eaeaea;
+}
+
+.form-floating input{
+  background-color: #F8F8F8;
+  border: none;
+}
+
+.form-floating textarea{
+  background-color: #F8F8F8;
+  border: none;
+}
+
+
+
