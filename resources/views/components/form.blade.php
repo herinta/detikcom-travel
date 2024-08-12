@@ -50,7 +50,25 @@
                     <input type="file" id="profilePicture" class="d-none" accept="image/*" />
                 </div>
             </div>
-            <button type="submit" class="btn-primary w-100">Daftar</button>
+            <div class="form-floating mb-4">
+                <input
+                    type="tel"
+                    class="form-control"
+                    id="floatingPhone"
+                    placeholder="Nomer Telepon"
+                />
+                <label for="floatingPhone">Nomer Telepon</label>
+                <small>Contoh: https://www.instagram.com/yourusername</small>
+            </div>
+            <div class="form-check mb-5">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+            Dengan menekan tombol "Daftar", Saya menyetujui syarat dan ketentuan yang berlaku
+            </label>
+            </div>
+            <div class="d-flex justify-content-center">
+            <button type="submit" class="btn-secondary border-0 w-50">Daftar</button>
+            </div>
         </form>
     </div>
 </section>

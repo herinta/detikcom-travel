@@ -1,4 +1,9 @@
 
+
+.orange-text{
+  color: #F79820;
+}
+
 .carousel{
   overflow-x: hidden;
 }
@@ -49,6 +54,9 @@
     border-radius: 30px;
     padding: 10px 15px;
     border: none;
+    box-shadow: 14px 0px 40px 12px rgba(255,211,103,0.36);
+-webkit-box-shadow: 14px 0px 40px 12px rgba(255,211,103,0.36);
+-moz-box-shadow: 14px 0px 40px 12px rgba(255,211,103,0.36);
   }
   
   .btn-primary:hover {
@@ -115,14 +123,21 @@ img.hero{
 }
 
 .about{
-  background-image:linear-gradient(180deg, rgba(0,209,255,0.9977240896358543) 28%, rgba(0,209,255,0.14618347338935578) 69%, rgba(0,209,255,1) 100%), url('../images/about.png'); 
+  background-image: url('../images/about.png'); 
   background-size: cover;    
   background-repeat: no-repeat;
   background-position: center;
   overflow-y: hidden;
-  padding-top: 200px;
+  padding-top: 171px;
+  padding-bottom: 162px;
 }
 
+.about h5{
+  font-size: 24px;
+}
+.about p{
+  font-size: 16px;
+}
 
 .timeline-with-icons {
   border-left: 2px dashed hsl(0, 0%, 90%);
@@ -135,8 +150,13 @@ li {
   list-style: none;
 }
 
+.text-date{
+  color: #FFE03C;
+  font-size: 16px;
+}
+
 .border-left-dashed{
-  border-left: 2px dashed hsl(0, 0%, 90%);
+  border-left: 2px dashed white;
   padding-left: 30px;
   margin-left: 18px;
 }
@@ -145,17 +165,7 @@ li {
   width: 30px;
 }
 
-.aggregator{
-  background-image:  url('../images/Aggregator.png');
-  background-size: cover;    
-  background-repeat: no-repeat;
-  padding-top: 130px;
-  padding-bottom: 150px;
-}
 
-.berita__utama{
-  background-image:  url('../images/Aggregator.png');
-}
 
 @media (max-width: 768px) {
   .logo {
@@ -191,12 +201,40 @@ li {
     height: 130px !important;
   }
   .gap-6{
-    gap: 24px;
+    gap: 16px;
+  }
+  .card-article{
+    margin-top: 30px;
+  }.
+  .img-article{
+    width: 120px;
+    height: 120px;
+  }
+  .img-article img{
+    width: 120px;
+    height: 120px;
   }
 }
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.aggregator{
+  background-image:  url('../images/Aggregator.png');
+  background-size: cover;    
+  background-repeat: no-repeat;
+  padding-top: 130px;
+  padding-bottom: 150px;
+}
+
+.aggregator h6{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.berita__utama{
+  background-image:  url('../images/Aggregator.png');
 }
 
 .berita_utama {
@@ -220,6 +258,11 @@ li {
   transform: scale(1.1); /* Zoom out gambar saat hover */
 }
 
+.overlay{
+  height: 207px;
+
+}
+
 .berita_utama .overlay {
   position: absolute;
   bottom: 0;
@@ -239,6 +282,13 @@ li {
   border-radius: 16px;
 }
 
+.card-content {
+  max-width: 500px;
+  overflow-wrap: break-word;
+  padding-right: 30px; /* Memastikan kata panjang terputus untuk menghindari overflow */
+}
+
+
 .article_title {
   font-size: 1.5rem; /* Ukuran teks jika diperlukan */
 }
@@ -250,8 +300,26 @@ li {
   border-radius: 16px; /* Ensures the rounded corners apply to the container */
 }
 
+.img-article{
+  width: 195px;
+  height: 153px;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+}
+
+.img-article img{
+  width: 195px;
+  height: 153px;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+}
+
 .img-container img {
-  width: 100%;
+  width: 195px;
   border-radius: 16px;
   transition: transform 0.3s ease-in-out; /* Smooth zoom in transition */
   transform-origin: center center; /* Keeps the image centered when scaling */
@@ -263,9 +331,65 @@ li {
 
 
 
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .aggregator {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+
+  .article_title {
+    font-size: 1.2rem; /* Kurangi ukuran teks */
+  }
+
+  .img-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .img-container img {
+    object-fit: cover;
+  }
+  .img-article{
+    width: 120px;
+    height: 120px;
+  }
+  .img-article img{
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Responsif untuk layar sangat kecil (misalnya ponsel) */
+@media (max-width: 576px) {
+
+
+  .img-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .img-container img {
+    object-fit: cover;
+  }
+
+  .article_title {
+    font-size: 1rem;
+  }
+  .img-article{
+    width: 120px;
+    height: 120px;
+  }
+  .img-article img{
+    width: 120px;
+    height: 120px;
+  }
+
+}
+
+
 .gap-6{
-  display: flex;
-  flex-direction: column;
   gap: 32px;
 }
 
@@ -276,6 +400,11 @@ li {
   padding: 24px 24px;
   text-align: center;
   text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-secondary:hover{
+  background-color: #FFC73C;
 }
 
 footer {

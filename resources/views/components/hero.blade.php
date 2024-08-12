@@ -15,6 +15,36 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function(){
+        const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,  // Display 3 slides at once
+    spaceBetween: 20,  // Space between s4lides (adjust as needed)
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 3000,  // Waktu delay dalam milidetik (3000 ms = 3 detik)
+        disableOnInteraction: false,  // Biarkan autoplay berlanjut setelah interaksi pengguna
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 4,
+          spaceBetween: 10
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 4,
+          spaceBetween: 10
+        },
+        // when window width is >= 640px
+      }
+});
         $('.swiper-slide img').click(function(){
             var imageUrl = $(this).attr('src');
             $('#hero-section').css('background-image', 'linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(0,209,255,1) 100%), url(' + imageUrl + ')');
@@ -32,3 +62,9 @@
         });
     });
 </script>
+
+
+<script>
+
+</script>
+

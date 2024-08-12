@@ -17,7 +17,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Berita</a>
           </li>
-          <a href="" class="btn-primary">Registrasi</a>
+          <a href="/registration" class="btn-primary">Registrasi</a>
         </ul>
       </div>
     </div>
